@@ -1,0 +1,32 @@
+.header { grid-area: header; }
+.leftnav {
+  grid-area: menu;
+  width: 225px;
+}
+.main {
+  grid-area: main;
+  grid-column: 1 / -1;
+}
+.right {
+  grid-area: right;
+  width: 50px;
+}
+.footer { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'menu main'
+    'footer footer';
+  grid-gap: 10px;
+  /*background-color: #2196F3;*/
+  padding: 10px;
+}
+
+.grid-container > div {
+  /*background-color: rgba(255, 255, 255, 0.8);*/
+  text-align: center;
+  padding: 5px 0;
+  /*font-size: 30px;*/
+}

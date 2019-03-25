@@ -1,0 +1,36 @@
+<div class="grid-container">
+  <div class="header">
+
+  </div>
+  <div class="leftnav">
+    <div>
+      <div>
+        Hex Size: <input type="number" value={{this.hexSize}} oninput={{action 'updateHexSize'}} >
+      </div>
+      <div>
+        <button {{action this.generateHex}}>Generate New Hex Map</button>
+      </div>
+    </div>
+    {{#if currentHexes}}
+    <div>
+      <div>
+        <button {{action this.exportHexes}}>Export Hexes</button>
+      </div>
+    </div>
+    {{/if}}
+
+  </div>
+  <div class="main">
+    <canvas id="hexcanvas" width="800" height="1000"></canvas>
+
+    {{#if currentHexes}}
+      <div>
+        Map: <textarea id="maparray" rows="{{this.hexSize}}" cols="80"></textarea>
+      </div>
+    {{/if}}
+
+    </div>
+  <div class="footer"></div>
+</div>
+
+
